@@ -18,7 +18,13 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            esModule: false,
+            publicPath: "",
+          },
+        }, "css-loader", "sass-loader"],
       },
       {
         test: /\.(js|jsx)$/,
