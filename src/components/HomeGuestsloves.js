@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import HotelItem from './HotelItem';
 import hotelData from '../constants/HotelsData';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '../style/HomeGuestsLoves.css';
 
 
 export default class HomeGuestsloves extends Component {   

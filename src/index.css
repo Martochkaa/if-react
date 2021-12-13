@@ -145,18 +145,3 @@ h2 {
 .slick-arrow.slick-hidden {
 	display: none;
 }
-
-.slick-arrow {
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 100%;
-  position: absolute;
-  background: url(./img/icons/arrowNext.svg) center center/auto no-repeat;
-  background-color: #f3f3f4;
-  right: -10px;
-  top: 30%;
-  -webkit-transition: ease-in 0.2s;
-  transition: ease-in 0.2s;
-}

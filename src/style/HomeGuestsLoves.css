@@ -1,0 +1,25 @@
+.slick-next {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #f3f3f4;
+    right: -10px;
+    top: 35%;
+    -webkit-transition: ease-in 0.2s;
+    transition: ease-in 0.2s;
+  }
+
+
+  .slick-next:before
+{
+    content: '>';
+    color: #2b2727;
+    font-weight: 100;
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '>';
+}
