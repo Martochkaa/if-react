@@ -1,0 +1,20 @@
+
+
+.nextArrow{
+font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #f3f3f4;
+    right: -10px;
+    top: 30%;
+    transition: ease-in 0.2s;
+    position: absolute;
+    margin-left: 99%;
+}
+.img-arrow{
+    margin-left: 44%;
+    margin-top: 23%;
+}
