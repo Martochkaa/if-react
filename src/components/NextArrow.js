@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/icons/arrowNext.svg';
+import arrow from '../img/icons/arrowNext.svg';
 import'../style/NextArrow.css';
 import PropTypes from 'prop-types';
 
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function NextArrow({ onClick })  {
   return (
     <div className="nextArrow" onClick={onClick} >
-      <img src={logo} alt="Logo" className="img-arrow"/> 
+      <img src={arrow} alt="Arrow" className="img-arrow"/> 
     </div> 
   )
 }
