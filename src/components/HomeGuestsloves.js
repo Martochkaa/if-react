@@ -6,22 +6,17 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/HomeGuestsLoves.css';
 import NextArrow from './NextArrow';
+import BackArrow from './BackArrow'
 
 
 function HomeGuestsloves() {  
-
-  const PrevArrow = () => {
-    return (
-      <div/>
-    )
-  }; 
 
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    prevArrow: <PrevArrow />,
+    prevArrow: <BackArrow />,
     nextArrow: <NextArrow />,
   };
   

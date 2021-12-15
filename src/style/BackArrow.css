@@ -1,22 +1,21 @@
-
-
-.nextArrow{
-font-size: 0;
+.BackArrow {
     width: 40px;
     height: 40px;
     border: none;
     border-radius: 100%;
     position: absolute;
     background-color: #f3f3f4;
-    right: -10px;
-    top: 30%;
     transition: ease-in 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    top: 30%;
 }
-.img-arrow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.img-arrow-back {
+   display: center;
+   justify-content: center;
+   align-items: center;
+   transform: rotate(180deg);
 }

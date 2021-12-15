@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 
 function NextArrow({ onClick })  {
   return (
-    <div className={"nextArrow text-arrow"} onClick={onClick} >
-      <img src={logo} alt="Logo" className={"img-arrow"}/> 
+    <div className="nextArrow" onClick={onClick} >
+      <img src={logo} alt="Logo" className="img-arrow"/> 
     </div> 
   )
 }
