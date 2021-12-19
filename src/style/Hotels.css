@@ -1,36 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-.display {
-  display: none;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  color: #111111;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  margin-bottom: 104px;
-}
 .slick-slider {
 	position: relative;
 
@@ -47,6 +14,13 @@ h2 {
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
 	-webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+	background-color: #eaf0f9;
+    padding: 120px 0;
 }
 
 .slick-list {
@@ -145,3 +119,27 @@ h2 {
 .slick-arrow.slick-hidden {
 	display: none;
 }
+
+.container_hotels {
+    background-color: #eaf0f9;
+	max-width: 1264px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .favorite-wrapper {
+    margin-top: 104px;
+  }
+  
+  .text_hotel {
+    color: #3077C6;
+    font-size: 24px;
+    margin-top: 24px;
+  }
+  
+  .location {
+    margin-top: 24px;
+    font-size: 24px;
+    color: #BFBFBF;
+    max-width: 300px;
+  }

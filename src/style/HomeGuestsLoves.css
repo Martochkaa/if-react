@@ -1,0 +1,52 @@
+ .slick-arrow {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+   
+    background-color: #f3f3f4;
+    right: -10px;
+    top: 35%;
+    -webkit-transition: ease-in 0.2s;
+    transition: ease-in 0.2s;
+  }
+
+
+  .slick-next:before
+{
+    content: '>';
+    color: #2b2727;
+
+    font-weight: 100;
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '>';
+}
+
+.slick-prev:hover{
+  display: block;
+  z-index: 1001;
+}
+
+.slick-next:hover{
+  display: block;
+  z-index: 1001;
+}
+
+.slick-arrow .slick-prev {
+  display: none;
+}
+ 
+.slick-prev:before {
+  display: none;
+}
+
+.slick-prev{
+  display: none;
+}
+
+.slick-arrow {
+  display: none;
+}
