@@ -3,7 +3,6 @@ import arrow from '../img/icons/arrowNext.svg';
 import'../style/NextArrow.css';
 import PropTypes from 'prop-types';
 
-
 function NextArrow({ onClick })  {
   return (
     <div className="nextArrow" onClick={onClick} >

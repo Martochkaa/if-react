@@ -16,6 +16,6 @@ function HotelItem(props) {
 
 HotelItem.propTypes = {
   data: PropTypes.object
-};
+};  
 
 export default HotelItem;
