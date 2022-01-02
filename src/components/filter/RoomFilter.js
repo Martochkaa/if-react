@@ -2,9 +2,7 @@ import React  from 'react';
 import FilterItem from './RoomFilterItem';
 import '../../style/TopStyle/Form.css';
 
-function plusParent() {
 
-}
 
 function minusParent(event) {
     event.target.classList.remove('counter-plus-minus-blue');
@@ -18,14 +16,13 @@ function RoomFilter() {
             <div className="counter-items-wrapper">
                 <FilterItem 
                     count ={0}
-                    plusEvent={plusParent}
                     minusEvent={minusParent}
                 />
                 <div className="counter-item">
                     <span className="counter-label">Children</span>
                     <div className="buttons-input-wrapper"> 
                         <button type="button" className="counter-plus-minus-gray counter-btn" id="btnCounterAdultMinus" data-direction="minus">-</button>
-                        <input className="counter-current-value" type="text" id="counterAdult" value="0" form="mainForm"></input>
+                        <input className="counter-current-value" type="text" id="counterAdult" defaultValue="0" form="mainForm"></input>
                         <button type="button" className="counter-plus-minus-blue counter-btn" id="btnCounterAdultPlus" data-direction="plus">+</button>
                     </div>
                 </div>
@@ -33,7 +30,7 @@ function RoomFilter() {
                     <span className="counter-label">Room</span>
                     <div className="buttons-input-wrapper"> 
                         <button type="button" className="counter-plus-minus-gray counter-btn" id="btnCounterAdultMinus" data-direction="minus">-</button>
-                        <input className="counter-current-value" type="text" id="counterAdult" value="0" form="mainForm"></input>
+                        <input className="counter-current-value" type="text" id="counterAdult" defaultValue="0" form="mainForm"></input>
                         <button type="button" className="counter-plus-minus-blue counter-btn" id="btnCounterAdultPlus" data-direction="plus">+</button>
                     </div>
                 </div>

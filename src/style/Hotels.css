@@ -188,3 +188,9 @@
     color: #383838;
  }
 
+.guests-Homes {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -168,6 +168,7 @@ input:not(:focus):valid ~ .check-out-label {
     position: absolute;
     top: 590px;
     right: 294px;
+    display: none;
     width: 294px;
     height: 500px;
     background-color: white;

@@ -1,6 +1,6 @@
 import React from 'react';
 import TripHous from '../../img/icons/logo_vector.png';
-import night from '../../img/icons/Night.png';
+import nightIcon from '../../img/icons/Night.png';
 import account from '../../img/icons/Vector.png';
 
 
@@ -13,7 +13,7 @@ function HeaderTop() {
             </div>
             <nav className="stays animated-header-line"><a href="#" className="header-link">Stays</a></nav>
             <nav className="attractions animated-header-line"><a href="#" className="header-link">Attractions</a></nav>
-            <div className="top-icon-night" style={{ backgroundImage: `url('${night}')` }} ></div>
+            <div className="top-icon-night" style={{ backgroundImage: `url('${nightIcon}')` }} ></div>
             <div className="top-icon-account" style={{ backgroundImage: `url('${account}')` }} ></div>
             <nav className="top-icon-burger"></nav>
         </header>

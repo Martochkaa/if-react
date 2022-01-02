@@ -21,8 +21,8 @@ function AvailableHotels(props) {
   }
   : {
     slidesToShow: props.hotelData.length,
-    prevArrow: <></>,
-    nextArrow: <></>,
+    prevArrow: null,
+    nextArrow: null,
   }
   
   return (
@@ -42,7 +42,7 @@ function AvailableHotels(props) {
 }
 
 AvailableHotels.propTypes = {
-    hotelData: PropTypes.object
+    hotelData: PropTypes.array.isRequired,
 }
 
 export default AvailableHotels;

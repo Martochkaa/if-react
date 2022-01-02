@@ -37,10 +37,8 @@ class Top extends React.Component {
         <HeaderTop/>
         <Filter setAvailableHotels={this.setAvailableHotels}/>
       </div>
-      {this.state.isAvailableHotelsVisible ? 
-          <AvailableHotels hotelData={this.state.availableHotels} /> : 
+      {this.state.isAvailableHotelsVisible && <AvailableHotels hotelData={this.state.availableHotels}/> } : 
           <></>
-      }
       </>
     );  
   }
