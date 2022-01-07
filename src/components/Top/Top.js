@@ -16,19 +16,23 @@ class Top extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: false,
       isAvailableHotelsVisible: false,
-      availableHotels : []
+      errors: null,
+      availableHotels : null
     }
 
     this.setAvailableHotels = this.setAvailableHotels.bind(this);
   }
 
-  setAvailableHotels(availableHotels) {
+  setAvailableHotels(availableHotels, isLoading, errors) {
     this.setState({
-      isAvailableHotelsVisible : true,
-      availableHotels : availableHotels
+      isLoading : isLoading,
+      availableHotels : availableHotels ? availableHotels : this.state.availableHotels,
+      errors: errors
     })
   }
+  
 
   render () {
     return (
@@ -37,7 +41,9 @@ class Top extends React.Component {
         <HeaderTop/>
         <Filter setAvailableHotels={this.setAvailableHotels}/>
       </div>
-      {this.state.isAvailableHotelsVisible && <AvailableHotels hotelData={this.state.availableHotels}/> } : 
+      {/* {this.state.isLoading && <div>Loading...</div>} */}
+      {/* {this.state.errors && <div>error</div>} */}
+      {this.state.availableHotels && <AvailableHotels hotelData={this.state.availableHotels}/> }
           <></>
       </>
     );  

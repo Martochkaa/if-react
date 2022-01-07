@@ -194,3 +194,21 @@
     align-items: center;
     flex-direction: column;
 }
+.slick-list {
+  
+  display: flex;
+  justify-content: center;
+}
+.imgHotels {
+  height: 295px;
+  width: 295px;
+}
+.slick-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 1264px;
+}
+.imageHotel {
+  height: 295px;
+  width: 295px;
+}

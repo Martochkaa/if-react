@@ -4,7 +4,6 @@ import app from '../../img/icons/app.png';
 import DateFilter from './DateFilter';
 import RoomFilter from '../filter/RoomFilter';
 import '../../style/TopStyle/Form.css';
-import hotelData from '../../constants/HotelsData';
 import PropTypes from 'prop-types';
 
 export default class Filter extends React.Component {
@@ -30,13 +29,18 @@ export default class Filter extends React.Component {
     }
 
     showAvailableHotels() {
-        const filterData = this.state.cityFilter;
-        const availableHotels = hotelData.filter(hotel => 
-            hotel.name.toLowerCase().search(filterData.toLowerCase()) !== -1 ||
-            hotel.city.toLowerCase().search(filterData.toLowerCase()) !== -1 ||
-            hotel.country.toLowerCase().search(filterData.toLowerCase()) !== -1 
-        )
-        this.props.setAvailableHotels(availableHotels);
+        this.props.setAvailableHotels(null, true, null);
+        const cityFilter = this.state.cityFilter;
+        fetch("https://fe-student-api.herokuapp.com/api/hotels" + (cityFilter ? "?search=" + cityFilter : ""))
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.props.setAvailableHotels(result, false, null)
+                },
+                (error) => {
+                    this.props.setAvailableHotels(null, false, error)
+                }
+            )
     }
 
     render() {
