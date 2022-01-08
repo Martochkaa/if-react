@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const BackArrow = ({onClick}) => {
     return (
-        <div className="BackArrow" onClick={onClick} >
+      <div className="BackArrow" onClick={onClick} >
         <img src={arrow} alt="Arrow" className="img-arrow-back"/> 
       </div> 
     )
@@ -15,4 +15,4 @@ const BackArrow = ({onClick}) => {
     onClick: PropTypes.func
   };
   
-  export default BackArrow;
+export default BackArrow;

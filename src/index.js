@@ -5,10 +5,13 @@ import './style/Hotels.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './style/fonts.css';
+import Top from './components/Top/Top';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Top />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

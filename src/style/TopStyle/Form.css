@@ -1,0 +1,416 @@
+article {
+    position: relative;
+    height: 225px;
+}
+
+.city-date-form {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 130px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 3px solid #F3F3F4;
+}
+
+.input-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #383838;
+}
+
+.city-input-container {
+    width: 40%;
+    height: 97%;
+    margin-right: 3px;
+    border-radius: 8px;
+}
+
+.city-input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.city-input-label {
+    position: absolute;
+    top: 22px;
+    left: 31px;
+    z-index: 1;
+}
+
+input:focus ~ .city-input-label,
+input:not(:focus):valid ~ .city-input-label {
+    top: -46px;
+    left: 27px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+input {
+    border: none;
+}
+
+.top-check-container {
+    width: 22%;
+    height: 110%;
+    padding-left: 3px;
+    margin-top: -3px;
+    border: 3px solid #F5BD41; 
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-in-container, .check-out-container {
+    width: 50%;
+    border: none;
+    position: relative;
+}
+
+.check-in-input {
+    width: 98%;
+    height: 97%;
+}
+
+.check-in-label {
+    position: absolute;
+    top: 2px;
+    left: 24px;
+}
+
+input:focus ~ .check-in-label,
+input:not(:focus):valid ~ .check-in-label {
+    top: -63px;
+    left: 21px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.check-out-container {
+    padding-left: 10px;
+}
+
+.check-out-input {
+    width: 100%;
+    height: 97%;
+}
+
+.check-out-label {
+    position: absolute;
+    top: 2px; 
+    left: 18px; 
+}
+
+input:focus ~ .check-out-label,
+input:not(:focus):valid ~ .check-out-label {
+    top: -63px;
+    left: 21px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.guest-input {
+    position: relative;
+    width: 25%;
+    border: 0px;
+    text-align: center;
+}
+
+.guest-label {
+    position: absolute;
+    width: 24%;
+    top: 22px;
+    right: 209px;
+    text-align: center;
+}
+
+.search-button {
+    width: 16%;
+    height: 112%;
+    margin-top: -3px;
+    margin-right: -3px;
+    background: #3077C6;
+    border-radius: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.apple-google {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+.google-img {
+    width: 135px;
+    height: 40px;    
+}
+
+.apple-img {
+    width: 118px;
+    height: 38px;
+}
+
+.filter-form {
+    position: absolute;
+    right: 294px;
+    width: 294px;
+    height: 130px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 26px 22px 22px;
+    top: 70px;
+}
+
+.counter-items-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 112px;
+    margin-bottom: 12px;
+}
+
+.counter-item {
+    width: 100%;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-label {
+    width: 50%;
+    height: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    margin-right: 47px;
+}
+
+.buttons-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-plus-minus-gray {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7e7676;
+    background-color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #7e7676;
+    text-align: center;
+    cursor: not-allowed;
+}
+
+.counter-plus-minus-blue {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3077C6;
+    background-color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3077C6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.counter-current-value, .counter-current-value-children {
+    background-color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    text-align: center;
+    width: 48px;
+}
+
+.age-of-child {
+    width: 218px;
+    height: 28px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.child-age-select {
+    margin-top: 12px;
+    width: 99px;
+    height: 30px;
+    border: 1px solid #3077C6;
+    margin-left: 9px;
+}
+
+.child-age-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+.headline {
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    height: 47px;
+    margin-top: 120px;
+    margin-bottom: 112px;
+    display: flex;
+    justify-content: center;
+    }
+    .container_headphones {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 176px;
+    }
+    .container_communicate {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 178px;
+    }
+    .container_gadgets {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 184px;
+    }
+    .container_like {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 183px;
+    }
+    .headphones {
+    width: 75px;
+    Height: 92px;
+    margin-bottom: 52px;
+    }
+    .communicate { 
+    width: 83px;
+    Height: 83px;
+    margin-bottom: 56px;
+    }
+    .gadgets {
+    width: 100px;
+    Height: 67px;
+    margin-bottom: 64px;
+    }
+    .like_img {
+    width: 92px;
+    Height: 83px;
+    margin-bottom: 60px;
+    }
+    .text_headphones {
+    height: 28px;
+    left: 77px;
+    top: 148px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #383838;
+    }
+    .text_communicate {
+    width: 296px;
+    height: 28px;
+    top: 148px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #383838;
+    }
+    .text_gadgets {
+    height: 28px;
+    left: 64px;
+    top: 148px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #383838;
+    }
+    .text_like {
+    width: 225px;
+    height: 28px;
+    left: 36px;
+    top: 148px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #383838;
+    }
+    .all_containers {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 120px;
+    }
+
+    .hide {
+        display: none;
+    }
+    
+    .selectsWrapper {
+        background: white;
+        width: 338px;
+        height: auto;
+        margin-left: -22px;
+        margin-top: -12px;
+        border-radius: 8px;
+    }

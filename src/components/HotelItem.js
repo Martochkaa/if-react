@@ -7,7 +7,7 @@ function HotelItem(props) {
 
   return (
     <div className="guests-Homes">
-      <img src={imageUrl} alt={name}/>
+      <img className= "imageHotel" src={imageUrl} alt={name}/>
       <div className="text_hotel">{name}</div>
       <div className="location">{city}, {country}</div>
     </div>
@@ -16,6 +16,6 @@ function HotelItem(props) {
 
 HotelItem.propTypes = {
   data: PropTypes.object
-};
+};  
 
 export default HotelItem;

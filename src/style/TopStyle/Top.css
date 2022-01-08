@@ -1,0 +1,40 @@
+
+.top-section {
+    position: relative;
+    background-size: cover;
+    padding: 0 104px 0 104px;
+    margin: 0 auto;
+    background-color: rgba(18, 18, 18, 0.25);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 960px;
+}
+
+.heading_top {
+    width: 542px;
+    height: 118px;
+    margin-top: 202px;
+    margin-bottom: 145px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+
+.top-icon-logo {
+    width: 70%;
+}
+
+.icon-logo {
+    width: 205px;
+    height: 40px;
+}
+.background {
+    position: relative;
+    max-width: 1440px;
+    z-index: 0; 
+}
