@@ -2,7 +2,7 @@ import React from 'react';
 import google from '../../img/icons/google-play-badge.png';
 import app from '../../img/icons/app.png';
 import DateFilter from './DateFilter';
-import RoomFilter from '../filter/RoomFilter';
+import FilterForm from './filterform/FilterForm';
 import '../../style/TopStyle/Form.css';
 import PropTypes from 'prop-types';
 
@@ -12,16 +12,22 @@ export default class Filter extends React.Component {
         super(props);
         this.state = { 
             cityFilter: "",
+            roomFilter: "0 Adults — 0 Children — 0 Room",
             isRoomFilterHide : true,
         };
                  
         this.changeCityFilter = this.changeCityFilter.bind(this);
         this.clickRoomFilter = this.clickRoomFilter.bind(this);
         this.showAvailableHotels = this.showAvailableHotels.bind(this);
+        this.changeFilterFormValue = this.changeFilterFormValue.bind(this);
     }
 
     clickRoomFilter() {
         this.setState({ isRoomFilterHide : !this.state.isRoomFilterHide })
+    }
+
+    changeFilterFormValue(value) {
+        this.setState({roomFilter : value})
     }
 
     changeCityFilter({target}) {
@@ -55,7 +61,7 @@ export default class Filter extends React.Component {
                         <label className="city-input-label">Your destination or hotel name</label>
                     </div>
                     <DateFilter/>
-                    <input onClick={this.clickRoomFilter} className="guest-input input-text col-md-12" id="guestInput" type="text" placeholder="2 Adults — 0 Children — 1 Room" autoComplete="off" ></input>
+                    <input onClick={this.clickRoomFilter} className="guest-input input-text col-md-12" id="guestInput" type="text" placeholder={this.state.roomFilter} autoComplete="off" ></input>
                     <button onClick={this.showAvailableHotels} className="search-button col-md-12" id="searchHotel" type="submit" form="mainForm">Search</button>
                 </div>
                 <div className="apple-google">
@@ -63,7 +69,7 @@ export default class Filter extends React.Component {
                 <a href="https://www.apple.com/ru/app-store/"><img className="apple-img" src={app} alt="app"/></a>
                 </div>
                 <div className={`filter-form${this.state.isRoomFilterHide ? " hide" : ""}`} id="filterForm">
-                    <RoomFilter/>
+                    <FilterForm changeValue={this.changeFilterFormValue}/>
                 </div>
             </article>
             </>

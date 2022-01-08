@@ -152,6 +152,7 @@ input:not(:focus):valid ~ .check-out-label {
 .apple-google {
     display: flex;
     justify-content: center;
+    padding-top: 35px;
 }
 
 .google-img {
@@ -166,14 +167,13 @@ input:not(:focus):valid ~ .check-out-label {
 
 .filter-form {
     position: absolute;
-    top: 590px;
     right: 294px;
-    display: none;
     width: 294px;
-    height: 500px;
+    height: 130px;
     background-color: white;
     border-radius: 8px;
     padding: 26px 22px 22px;
+    top: 70px;
 }
 
 .counter-items-wrapper{
@@ -181,7 +181,7 @@ input:not(:focus):valid ~ .check-out-label {
     flex-direction: column;
     justify-content: space-between;
     height: 112px;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
 }
 
 .counter-item {
@@ -271,6 +271,7 @@ input:not(:focus):valid ~ .check-out-label {
     width: 99px;
     height: 30px;
     border: 1px solid #3077C6;
+    margin-left: 9px;
 }
 
 .child-age-text {
@@ -399,4 +400,17 @@ input:not(:focus):valid ~ .check-out-label {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 120px;
+    }
+
+    .hide {
+        display: none;
+    }
+    
+    .selectsWrapper {
+        background: white;
+        width: 338px;
+        height: auto;
+        margin-left: -22px;
+        margin-top: -12px;
+        border-radius: 8px;
     }
