@@ -6,14 +6,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './style/fonts.css';
 import Top from './components/Top/Top';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Top />
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

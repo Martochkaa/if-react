@@ -133,3 +133,73 @@ h2 {
 .slick-arrow.slick-hidden {
 	display: none;
 }
+
+ul {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	padding-left: 0px;
+	}
+	li {
+	list-style-type: none;
+	margin-bottom: 24px;
+	}    
+	.heading_logo {
+	display: none;}
+
+	.last_block {
+	padding-bottom: 120px;
+	background: #10367C;
+	padding-top: 120px;
+	}
+	.heading_logo {
+	display: block;
+	}
+	.container {
+	display: flex;
+	justify-content: space-between;}
+	p {
+	margin-top: 0px;
+	}
+	.container_about {
+	width: 193px;
+	margin-right: 223px;
+	height: 211px;
+	margin-left: 104px;
+	}
+	.container_property_types {
+	width: 133px;
+	margin-right: 283px;
+	height: 310px;
+	}
+	.container_support {
+	width: 233px;
+	height: 122px;
+	}
+	.caption {
+	color: #FFFFFF;
+	display: block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 32px;
+	margin-bottom: 120px;
+	margin-left: 104px;
+	}
+	.heading_about {
+	width: 54px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	color: #FFFFFF;
+	}
+	.heading_property {
+	width: 131px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	color: #FFFFFF;
+	}

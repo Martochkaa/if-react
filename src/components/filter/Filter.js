@@ -34,6 +34,7 @@ export default class Filter extends React.Component {
         this.setState({ cityFilter : target.value })
     }
 
+    
     showAvailableHotels() {
         this.props.setAvailableHotels(null, true, null);
         const cityFilter = this.state.cityFilter;
