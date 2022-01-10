@@ -4,13 +4,13 @@ import '../../style/TopStyle/Form.css';
 
 
 
-function minusParent(event) {
+const minusParent = (event) => {
     event.target.classList.remove('counter-plus-minus-blue');
     event.target.classList.add('counter-plus-minus-grey');
 }
 
 
-function RoomFilter() {
+const RoomFilter = () => {
     return (
         <>
             <div className="counter-items-wrapper">

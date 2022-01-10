@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function HotelItem(props) {
+const HotelItem = (props) => {
 
   const {name, city, country, imageUrl} = props.data;
 

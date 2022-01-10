@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FilterItem(props) {
+const FilterItem = (props) => {
 
     const {plusEvent, minusEvent, count} = props;
 

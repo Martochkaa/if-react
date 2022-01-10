@@ -8,7 +8,7 @@ import NextArrow from './NextArrow';
 import BackArrow from './BackArrow'
 
 
-function HomeGuestsloves() {  
+const HomeGuestsloves = () =>  {  
 
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);

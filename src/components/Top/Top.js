@@ -41,8 +41,6 @@ class Top extends React.Component {
         <HeaderTop/>
         <Filter setAvailableHotels={this.setAvailableHotels}/>
       </div>
-      {/* {this.state.isLoading && <div>Loading...</div>} */}
-      {/* {this.state.errors && <div>error</div>} */}
       {this.state.availableHotels && <AvailableHotels hotelData={this.state.availableHotels}/> }
           <></>
       </>

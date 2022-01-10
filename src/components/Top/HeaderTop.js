@@ -4,7 +4,7 @@ import nightIcon from '../../img/icons/Night.png';
 import account from '../../img/icons/Vector.png';
 
 
-function HeaderTop() {  
+const HeaderTop = () => {  
     return (
         <>
         <header>

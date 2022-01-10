@@ -8,7 +8,7 @@ import BackArrow from '../BackArrow';
 import PropTypes from 'prop-types';
 
 
-function AvailableHotels(props) {  
+const AvailableHotels = (props) => {  
 
   const settings = props.hotelData.length > 4 
   ? {
