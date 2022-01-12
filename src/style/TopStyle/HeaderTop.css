@@ -1,0 +1,85 @@
+header {
+    margin: 0;
+    padding-top: 51px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+top-icon-logo {
+    width: 70%;
+}
+.icon-logo {
+    width: 205px;
+    height: 40px;
+}
+.stays {
+    margin-right: 28px;
+    width: 59px;
+    height: 28px;
+}
+.animated-header-line a {
+    display: inline-block;
+    color: #FFFFFF;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.animated-header-line a::after {
+    display: block;
+    content: "";
+    background-color: #F5BD41;
+    width: 0;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    transition: width .3s ease-in-out;
+    transform: translateX(-50%);
+}
+.attractions {
+    margin-right: 48px;
+    width: 118px;
+    height: 28px;
+}
+nav {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.top-icon-night {
+    background-image: url(../../img/icons/header-sprite.svg#night);
+    width: 30px;
+    height: 30px;
+    transition: background-image .3s ease-in-out;
+}
+.top-icon-account {
+    background-image: url(../../img/icons/header-sprite.svg#account);
+    margin-left: 24px;
+    width: 55px;
+    height: 55px;
+    transition: background-image .3s ease-in-out;
+}
+.top-icon-burger {
+    background-image: url(../../img/icons/header-sprite.svg#burger-menu);
+    display: none;
+    width: 26px;
+    height: 16px;
+}
+

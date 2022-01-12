@@ -3,12 +3,11 @@ import arrow from '../img/icons/arrowNext.svg';
 import'../style/NextArrow.css';
 import PropTypes from 'prop-types';
 
-
-function NextArrow({ onClick })  {
+const NextArrow =({ onClick }) => {
   return (
-    <div className="nextArrow" onClick={onClick} >
+    <button className="nextArrow" onClick={onClick} >
       <img src={arrow} alt="Arrow" className="img-arrow"/> 
-    </div> 
+    </button> 
   )
 }
 
