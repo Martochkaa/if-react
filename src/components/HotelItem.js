@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function HotelItem(props) {
+const HotelItem = (props) => {
 
   const {name, city, country, imageUrl} = props.data;
 
-  return (
+  return ( 
     <div className="guests-Homes">
       <img className= "imageHotel" src={imageUrl} alt={name}/>
       <div className="text_hotel">{name}</div>

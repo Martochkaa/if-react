@@ -6,9 +6,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from '../NextArrow';
 import BackArrow from '../BackArrow';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+//import HotelDetail from './HotelId/NewHotels';
 
-
-function AvailableHotels(props) {  
+const AvailableHotels = (props) => {  
 
   const settings = props.hotelData.length > 4 
   ? {
@@ -26,18 +27,29 @@ function AvailableHotels(props) {
   }
   
   return (
-      <>
+      
         <section className="available-hotels col-md-12" id="avalableHotels">
             <h1 className="available-hotels-title section-title col-md-12">Available hotels</h1>
+
             <Slider {...settings}>
-                {props.hotelData.map((item) => (
-                <HotelItem 
-                    key = {item.name}
-                    data = {item}/>)
-                )}
+           <div>
+             {props.hotelData.map(item => {
+                  return (
+
+                    <div key={item.id} >
+                      <Link to ={`${item.id}`}>
+          (<HotelItem 
+          data = {item}
+          /> )
+                    </Link>
+                   </div> 
+                  );})
+}
+       </div>                 
             </Slider>
+            
         </section>
-      </>
+      
   );
 }
 
