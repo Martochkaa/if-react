@@ -6,11 +6,31 @@ import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from '../NextArrow';
 import BackArrow from '../BackArrow';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-//import HotelDetail from './HotelId/NewHotels';
+import { Link,
+  generatePath,
+  useHistory, Switch, Route } from 'react-router-dom';
+//import HotelDetail from '../filter/HotelId/NewHotels'
+import { useState,
+ } from "react";
+import HotelDetail from './HotelId/NewHotels';
+
+
 
 const AvailableHotels = (props) => {  
 
+  const [id] = useState();
+  const history = useHistory();
+
+  const handleProceed = () => {
+  id && history.push(generatePath("https://fe-student-api.herokuapp.com/api/hotels/:id"), {id})
+  return (
+    <div>
+    <HotelDetail/>
+    </div>
+  )
+};
+  
+  
   const settings = props.hotelData.length > 4 
   ? {
     infinite: true,
@@ -28,31 +48,30 @@ const AvailableHotels = (props) => {
   
   return (
       
-        <section className="available-hotels col-md-12" id="avalableHotels">
-            <h1 className="available-hotels-title section-title col-md-12">Available hotels</h1>
-
-            <Slider {...settings}>
-           <div>
-             {props.hotelData.map(item => {
-                  return (
-
-                    <div key={item.id} >
-                      <Link to ={`${item.id}`}>
-          (<HotelItem 
-          data = {item}
-          /> )
-                    </Link>
-                   </div> 
-                  );})
+    <>
+    <section className="available-hotels col-md-12" id="avalableHotels">
+        <h1 className="available-hotels-title section-title col-md-12">Available hotels</h1>
+        <Switch>
+        <Route exact patch = "https://fe-student-api.herokuapp.com/api/hotel/:id">
+        <Slider {...settings}>
+          
+            {props.hotelData.map((item, id) => (
+            <div 
+              key = {id}
+              onClick={handleProceed}>
+              <Link to={`/hotels/${item.id}`}> 
+            <HotelItem 
+                data = {item}/>
+                 </Link>
+                 </div>)
+            )}
+        </Slider>
+        </Route>
+        </Switch>
+    </section>
+  </>
+);
 }
-       </div>                 
-            </Slider>
-            
-        </section>
-      
-  );
-}
-
 AvailableHotels.propTypes = {
     hotelData: PropTypes.array.isRequired,
 }

@@ -1,17 +1,17 @@
-import React from 'react';
+//import React from 'react';
 //import nightIcon from '../../../img/icons/Night.png';
 //import account from '../../../img/icons/Vector.png';
-import {
-  BrowserRouter as
-  Link,
-  Route,
-  Switch
-} from 'react-router-dom';
+//import {
+  //BrowserRouter as
+ // Link,
+//  Route,
+//  Switch
+//} from 'react-router-dom';
 //import HotelItem from '../../HotelItem';
-import AvailableHotels from '../AvailableHotels';
-import HotelDetail from './NewHotels';
+//import AvailableHotels from '../AvailableHotels';
+//import HotelDetail from './NewHotels';
 //import logo_vector from '../../../img/icons/logo_vector.png'
-import { Component } from 'react';
+//import { Component } from 'react';
 
 
 
@@ -19,43 +19,43 @@ import { Component } from 'react';
 
 
 
-class HotelRouter extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        hotels: [],
-      };
-    }
-componentDidMount () {
-    fetch(`https://fe-student-api.herokuapp.com/api/hotels`)
-    .then(res => res.json()).then((hotels) => {
-        this.setState({hotels});
-    });
-}
+//class HotelRouter extends Component {
+  //  constructor(props) {
+    //    super(props);
+      //  this.state = {
+        //hotels: [],
+//      };
+  //  }
+//componentDidMount () {
+  //  fetch(`https://fe-student-api.herokuapp.com/api/hotels`)
+    //.then(res => res.json()).then((hotels) => {
+      //  this.setState({hotels});
+//    });
+//}
 
-      render() {
-    return (
-<> 
-    <Link to="https://fe-student-api.herokuapp.com/api/">
+//      render() {
+  //  return (
+//<> 
+  //  <Link to="https://fe-student-api.herokuapp.com/api/">
      
-    </Link>
+//    </Link>
   
   
-<Switch>
-  <Route exact path="https://fe-student-api.herokuapp.com/api/">
-    <AvailableHotels/>
-    </Route>
-    <Route exact patch="/hotels/:id">
-    <HotelDetail/>
-    </Route>
-</Switch>
-</>
+//<Switch>
+  //<Route exact path="https://fe-student-api.herokuapp.com/api/">
+    //<AvailableHotels/>
+//    </Route>
+  //  <Route exact patch="/hotels/:id">
+//    <HotelDetail/>
+  //  </Route>
+//</Switch>
+//</>
     
-    );
-}
-}
+  //  );
+//}
+//}
 
-export default HotelRouter
+//export default HotelRouter
 
 
 
