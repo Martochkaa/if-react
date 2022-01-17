@@ -1,15 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import HotelRoute from "./RouterHotel";
-//import HotelItem from "../../HotelItem";
-//import AvailableHotels from "../AvailableHotels";
+//import HotelRoute from "./RouterHotel";
 import nightIcon from '../../../img/icons/Night.png';
 import account from '../../../img/icons/Vector.png';
 import logo_vector from '../../../img/icons/logo_vector.png'
+import FetchHotelsRouter from "./RouterHotel";
 
 const HotelDetail = () => {
     const {id} = useParams()
-    const thisHotels = HotelRoute.find(prod => prod.id === id)
+    const thisHotels = FetchHotelsRouter(prod => prod.id === id)
 
 
     return (

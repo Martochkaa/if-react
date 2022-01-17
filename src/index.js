@@ -6,14 +6,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './style/fonts.css';
 import Top from './components/Top/Top';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import HotelDetail from '../src/components/filter/HotelId/NewHotels';
 
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Top />
+    <Switch>
+        <Route exact patch = "/">
     <App />
+        </Route>
+        <Route exact patch = "hotels/{hotel-id}">
+     <HotelDetail/>     
+        </Route>
+     </Switch>   
   </BrowserRouter>,
   document.getElementById('root')
 );

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 function FilterButton(props) {
     return (
-      <>
+      
         <button onClick={props.isEnable ? props.event : () => {}}  
             className={`counter-btn counter-plus-minus-${props.isEnable ? "blue" : "gray"}`}>{props.value}
         </button>
-      </>
+      
     )
 }
 

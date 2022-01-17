@@ -8,7 +8,7 @@ import BackArrow from '../BackArrow';
 import PropTypes from 'prop-types';
 import { Link,
   generatePath,
-  useHistory, Switch, Route } from 'react-router-dom';
+  useHistory } from 'react-router-dom';
 //import HotelDetail from '../filter/HotelId/NewHotels'
 import { useState,
  } from "react";
@@ -51,10 +51,7 @@ const AvailableHotels = (props) => {
     <>
     <section className="available-hotels col-md-12" id="avalableHotels">
         <h1 className="available-hotels-title section-title col-md-12">Available hotels</h1>
-        <Switch>
-        <Route exact patch = "https://fe-student-api.herokuapp.com/api/hotel/:id">
         <Slider {...settings}>
-          
             {props.hotelData.map((item, id) => (
             <div 
               key = {id}
@@ -66,8 +63,6 @@ const AvailableHotels = (props) => {
                  </div>)
             )}
         </Slider>
-        </Route>
-        </Switch>
     </section>
   </>
 );
