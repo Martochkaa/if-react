@@ -7,29 +7,16 @@ import NextArrow from '../NextArrow';
 import BackArrow from '../BackArrow';
 import PropTypes from 'prop-types';
 import { Link,
-  generatePath,
-  useHistory } from 'react-router-dom';
+ // generatePath,
+ } from 'react-router-dom';
 
-import { useState,
- } from "react";
-import HotelDetail from './HotelId/NewHotels';
+//import { useState,
+// } from "react";
+//import HotelDetail from './HotelId/NewHotels';
 
 
 
-const AvailableHotels = (props) => {  
-
-  const [id] = useState();
-  const history = useHistory();
-
-  const handleProceed = () => {
-  id && history.push(generatePath("https://fe-student-api.herokuapp.com/api/hotels/:id"), {id})
-  return (
-    <div>
-    <HotelDetail/>
-    </div>
-  )
-};
-  
+const AvailableHotels = (props) => { 
   
   const settings = props.hotelData.length > 4 
   ? {
@@ -54,9 +41,8 @@ const AvailableHotels = (props) => {
         <Slider {...settings}>
             {props.hotelData.map((item, id) => (
             <div 
-              key = {id}
-              onClick={handleProceed}>
-              <Link to={`/hotels/${item.id}`}> 
+              key = {id}>
+              <Link to={`/hotels/${item.id}`}>
             <HotelItem 
                 data = {item}/>
                  </Link>

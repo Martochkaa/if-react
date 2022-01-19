@@ -1,17 +1,46 @@
-import React from "react";
 import nightIcon from '../../../img/icons/Night.png';
 import account from '../../../img/icons/Vector.png';
 import logo_vector from '../../../img/icons/logo_vector.png'
-import HotelDetail from '../HotelId/RouterHotel'
-import { useParams } from "react-router-dom";
-
+//import HotelDetail from '../HotelId/RouterHotel'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
   const FetchHotelsRouter = () => {  
 
-      const {id} = useParams() // чтоб уловить id 
-      const thisHotels = HotelDetail.find(prod => prod.id === id) 
+    const params = useParams()
 
-    return (
+    const [availableHotel, setAvailableHotel] = useState(null)
+    const [error, setError] = useState(null)
+    const [isLoaded, setIsLoaded] = useState(false)
+  
+    useEffect(() => {
+      const url = new URL(
+        'https://fe-student-api.herokuapp.com/api/hotels/hotelId',
+      )
+      const newUrl = new URL(`${params.id}`, url)
+  
+      fetch(`${newUrl}`)
+        .then((response) => response.json())
+        .then(
+          (result) => {
+            setIsLoaded(true)
+            setAvailableHotel(result)
+          },
+          (error) => {
+            setIsLoaded(true)
+            setError(error)
+          },
+        )
+    }, [params.id])
+  
+    if (error) {
+      return <div>Error: {error.message}</div>
+    } else if (!isLoaded) {
+      return <div>Loading...</div>
+    } else if (availableHotel === null) {
+      return <div>Loading...</div>
+    } else {
+      return (
         <div> 
         <nav className="stays animated-header-line"><a href="#" className="header-link">Stays</a></nav>
         <nav className="attractions animated-header-line"><a href="#" className="header-link">Attractions</a></nav>
@@ -20,9 +49,9 @@ import { useParams } from "react-router-dom";
         <nav className="top-icon-burger"></nav>  
 
       <div className="guests-Homes">
-      <img className= "imageHotel" src={thisHotels.imageUrl} alt={thisHotels.name}/>
-      <div className="text_hotel">{thisHotels.name}</div>
-      <div className="location">{thisHotels.city}, {thisHotels.country}</div>
+      <img className= "imageHotel" src={availableHotel.imageUrl} alt={availableHotel.name}/>
+      <div className="text_hotel">{availableHotel.name}</div>
+      <div className="location">{availableHotel.city}, {availableHotel.country}</div>
       </div>
 
         <footer className="last_block">
@@ -63,5 +92,5 @@ import { useParams } from "react-router-dom";
     </div>  
     );
     }
-    
+  }
     export default FetchHotelsRouter;
