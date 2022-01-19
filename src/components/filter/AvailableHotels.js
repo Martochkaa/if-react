@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { Link,
   generatePath,
   useHistory } from 'react-router-dom';
-//import HotelDetail from '../filter/HotelId/NewHotels'
+
 import { useState,
  } from "react";
 import HotelDetail from './HotelId/NewHotels';

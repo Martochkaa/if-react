@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import HomeGuestsloves from './components/HomeGuestsloves';
 
-
 function App() {
   return (
     <div className="container">

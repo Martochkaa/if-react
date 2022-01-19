@@ -1,18 +1,18 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-//import HotelRoute from "./RouterHotel";
 import nightIcon from '../../../img/icons/Night.png';
 import account from '../../../img/icons/Vector.png';
 import logo_vector from '../../../img/icons/logo_vector.png'
-import FetchHotelsRouter from "./RouterHotel";
+import HotelDetail from '../HotelId/RouterHotel'
+import { useParams } from "react-router-dom";
 
-const HotelDetail = () => {
-    const {id} = useParams()
-    const thisHotels = FetchHotelsRouter(prod => prod.id === id)
 
+  const FetchHotelsRouter = () => {  
+
+      const {id} = useParams() // чтоб уловить id 
+      const thisHotels = HotelDetail.find(prod => prod.id === id) 
 
     return (
-        <>
+        <div> 
         <nav className="stays animated-header-line"><a href="#" className="header-link">Stays</a></nav>
         <nav className="attractions animated-header-line"><a href="#" className="header-link">Attractions</a></nav>
         <div className="top-icon-night" style={{ backgroundImage: `url('${nightIcon}')` }} ></div>
@@ -60,8 +60,8 @@ const HotelDetail = () => {
    </div>
         <p className="caption">&copy; 2020 Triphouse, lnc. All right reserved</p>
     </footer>
-      </>
-    )
-}
-
-export default HotelDetail;
+    </div>  
+    );
+    }
+    
+    export default FetchHotelsRouter;

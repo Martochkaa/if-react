@@ -1,33 +1,32 @@
-
-import {useEffect, useState} from 'react';
-
-
+import PropTypes from 'prop-types';
+import React from "react";
 
 
+export default class HotelDetail extends React.Component {
 
-
-const FetchHotelsRouter = () =>  {  
-
-  const [setError] = useState(null);
-  const [setIsLoaded] = useState(false);
-  const [setItems] = useState([]);
-
-  useEffect(() => {
-    fetch("https://fe-student-api.herokuapp.com/api/hotels/popular")
-    .then(res => res.json())
-    .then(
-        (result) => {
-            setIsLoaded(true);
-            setItems(result);
-        },
-        (error) => {
-            setIsLoaded(true);
-            setError(error);
-        }
-    )
-  },)
-}
-
-export default FetchHotelsRouter;
-
+  constructor(props){
+    super(props);
   
+
+    this.FetchHotelsRouter = this.FetchHotelsRouter.bind(this);
+  }
+   FetchHotelsRouter () {  
+
+    this.props.setAvailableHotels(null, true, null);
+        fetch("https://fe-student-api.herokuapp.com/api/hotels")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.props.setAvailableHotels(result, false, null)
+                },
+                (error) => {
+                    this.props.setAvailableHotels(null, false, error)
+                }
+            )
+    }
+
+  }
+
+HotelDetail.propTypes = {
+  setAvailableHotels:PropTypes.func
+}

@@ -7,8 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import './style/fonts.css';
 import Top from './components/Top/Top';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HotelDetail from '../src/components/filter/HotelId/NewHotels';
-
+import FetchHotelsRouter from '../src/components/filter/HotelId/NewHotels';
 
 
 ReactDOM.render(
@@ -19,7 +18,7 @@ ReactDOM.render(
     <App />
         </Route>
         <Route exact patch = "hotels/{hotel-id}">
-     <HotelDetail/>     
+     <FetchHotelsRouter/>     
         </Route>
      </Switch>   
   </BrowserRouter>,
